@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">@color/crazyPink</color>
 
-    <color name="crazyPink">#D81B60</color>
+    <color name="crazyPink">#DE3D73</color>
     <color name="bookCoverBackgroundColour">@color/crazyPink</color>
     <color name="white_87">#DEFFFFFF</color>
 </resources>
