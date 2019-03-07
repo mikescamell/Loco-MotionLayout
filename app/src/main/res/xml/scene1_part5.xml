@@ -33,7 +33,7 @@
                 app:layout_height="wrap_content"
                 app:layout_marginEnd="32dp"
                 app:layout_marginTop="32dp"
-                app:layout_width="0dp" />
+                app:layout_width="300dp" />
             <Transform app:rotationX="-55" />
         </Constraint>
 
@@ -41,11 +41,11 @@
             <PropertySet app:alpha="0" />
             <Layout
                 app:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_constraintEnd_toEndOf="@+id/bookSynopsisCard"
-                app:layout_constraintStart_toStartOf="@+id/bookSynopsisCard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bookSynopsisTitle"
                 app:layout_height="0dp"
-                app:layout_width="0dp" />
+                app:layout_width="300dp" />
             <Transform app:rotationX="-55" />
         </Constraint>
 
