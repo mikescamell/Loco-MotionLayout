@@ -38,7 +38,7 @@ ext {
     fragment = "1.1.0-alpha04"
     glide = "4.8.0"
     groupie = "2.3.0"
-    materialComponents = "1.1.0-alpha03"
+    materialComponents = "1.1.0-alpha04"
     materialSpinner = "1.3.1"
     moshi = '1.8.0'
     multidex = "1.0.2"
