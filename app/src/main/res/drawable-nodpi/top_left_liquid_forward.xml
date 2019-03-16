@@ -13,7 +13,7 @@
                     android:pathData="M 0 0 L 117 0 L 117 109 L 0 109 Z" />
                 <path
                     android:name="path_3"
-                    android:fillColor="@color/white_87"
+                    android:fillColor="@color/white87"
                     android:pathData="M 116.5 0 C 114.325 14.601 101.5 21 90 26.5 C 78.5 32 63.5 30.233 52.5 40.5 C 41.5 50.767 50 64 38 77 C 26 90 0 100 0 100 L 0 0 L 116.5 0 Z"
                     android:strokeWidth="1" />
             </group>

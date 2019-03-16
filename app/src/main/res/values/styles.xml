@@ -1,9 +1,10 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">#DE3D73</item>
-        <item name="colorPrimaryDark">#DE3D73</item>
-        <item name="colorAccent">#FFFFFF</item>
+        <item name="colorPrimary">@color/crazyPink</item>
+        <item name="colorPrimaryDark">@color/crazyPink</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:statusBarColor">@color/transparent</item>
     </style>
 
 </resources>

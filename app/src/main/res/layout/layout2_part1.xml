@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/scene1_part6">
+    app:layoutDescription="@xml/scene2_part1">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bookSynopsisCard"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         app:cardBackgroundColor="@color/crazyPink"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp">
@@ -34,42 +34,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
-    <TextView
-        android:id="@+id/bookSynopsisTitle"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:elevation="4dp"
-        android:fontFamily="@font/nimbus_roman_medium"
-        android:gravity="center|end"
-        android:text="@string/synopsis"
-        android:textAppearance="?textAppearanceHeadline6"
-        android:textColor="@color/white87" />
-
-    <TextView
-        android:id="@+id/bookSynopsisText"
-        android:layout_width="300dp"
-        android:layout_height="0dp"
-        android:elevation="4dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/nimbus_roman_regular"
-        android:lineSpacingExtra="4dp"
-        android:paddingStart="32dp"
-        android:paddingEnd="32dp"
-        android:paddingBottom="32dp"
-        android:text="@string/synopsis_text"
-        android:textAppearance="?textAppearanceBody1"
-        android:textColor="@color/white87"
-        android:textSize="12sp"
-        app:layout_constrainedHeight="true" />
-
-    <ImageView
-        android:id="@+id/bookCover"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/bookcover"
-        android:elevation="4dp"
-        android:src="@drawable/nolongerhuman" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

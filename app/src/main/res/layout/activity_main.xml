@@ -6,13 +6,51 @@
     android:padding="16dp">
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene1Part1Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Scene 1 - Part 1" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene1Part2Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Scene 1 - Part 2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene1Part3Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scene 1 - Part 3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene1Part4Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scene 1 - Part 4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene1Part5Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scene 1 - Part 5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene1Part6Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scene 1 - Part 6" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene1Part7Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scene 1 - Part 7" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene2Part1Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scene 2 - Part 1" />
 
 </LinearLayout>

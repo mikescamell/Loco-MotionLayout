@@ -6,5 +6,8 @@
 
     <color name="crazyPink">#DE3D73</color>
     <color name="bookCoverBackgroundColour">@color/crazyPink</color>
-    <color name="white_87">#DEFFFFFF</color>
+
+    <color name="white">#FFF</color>
+    <color name="white87">#DEFFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>
