@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/startToEnd"
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:target="@+id/bookSynopsisCard" />
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="10"
+                app:target="@id/bookSynopsisTitle" />
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="10"
+                app:target="@id/bookSynopsisText" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/bookSynopsisCard">
+            <Layout
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_height="300dp"
+                app:layout_width="300dp" />
+            <CustomAttribute
+                app:attributeName="radius"
+                app:customDimension="16dp" />
+            <Transform app:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/bookSynopsisTitle">
+            <Transform app:elevation="4dp" />
+            <PropertySet app:alpha="1" />
+        </Constraint>
+
+        <Constraint android:id="@+id/bookSynopsisText">
+            <Transform app:elevation="4dp" />
+            <PropertySet app:alpha="1" />
+        </Constraint>
+
+        <Constraint android:id="@+id/bookCover">
+            <Layout
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bookSynopsisCard"
+                app:layout_width="150dp" />
+            <Transform
+                app:elevation="4dp"
+                app:rotationX="-55"
+                app:translationY="260dp" />
+            <CustomAttribute
+                app:attributeName="outlineSpotShadowColor"
+                app:customColorValue="@color/transparent" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint android:id="@+id/bookSynopsisCard">
+            <Layout
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_height="0dp"
+                app:layout_width="0dp" />
+            <CustomAttribute
+                app:attributeName="radius"
+                app:customDimension="0dp" />
+            <Transform app:elevation="8dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/bookSynopsisTitle">
+            <Transform app:elevation="8dp" />
+            <PropertySet app:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/bookSynopsisText">
+            <Transform app:elevation="8dp" />
+            <PropertySet app:alpha="0" />
+        </Constraint>
+
+        <Constraint android:id="@+id/bookCover">
+            <Layout
+                app:layout_constraintBottom_toBottomOf="@id/bookSynopsisCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_marginStart="24dp"
+                app:layout_width="120dp" />
+            <Transform
+                app:elevation="12dp"
+                app:rotationX="0"
+                app:translationY="24dp"
+                app:translationZ="0dp" />
+            <CustomAttribute
+                app:attributeName="outlineSpotShadowColor"
+                app:customColorValue="#000000" />
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

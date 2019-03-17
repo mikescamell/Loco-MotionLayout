@@ -59,4 +59,10 @@
         android:layout_height="wrap_content"
         android:text="Scene 2 - Part 2" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scene2Part3Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scene 2 - Part 3" />
+
 </LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/scene2_part3">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bookSynopsisCard"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:cardBackgroundColor="@color/crazyPink"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bookSynopsisFluidTopLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/bookSynopsisFluidBottomRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/bookSynopsisTitle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/nimbus_roman_medium"
+        android:gravity="center|end"
+        android:text="@string/synopsis"
+        android:textAppearance="?textAppearanceHeadline6"
+        android:textColor="@color/white87"
+        app:layout_constraintEnd_toEndOf="@id/bookSynopsisCard"
+        app:layout_constraintTop_toTopOf="@id/bookSynopsisCard" />
+
+    <TextView
+        android:id="@+id/bookSynopsisText"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nimbus_roman_regular"
+        android:lineSpacingExtra="4dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="32dp"
+        android:text="@string/synopsis_text"
+        android:textAppearance="?textAppearanceBody1"
+        android:textColor="@color/white87"
+        android:textSize="12sp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookSynopsisTitle" />
+
+    <ImageView
+        android:id="@+id/bookCover"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/bookcover"
+        android:outlineProvider="bounds"
+        android:src="@drawable/nolongerhuman" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
