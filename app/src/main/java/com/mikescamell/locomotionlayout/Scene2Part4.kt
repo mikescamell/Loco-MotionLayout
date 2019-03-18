@@ -1,13 +1,21 @@
 package com.mikescamell.locomotionlayout
 
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.core.graphics.ColorUtils
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
+import kotlinx.android.synthetic.main.layout2_part4.*
 
+/**
+ * Demonstrates adding the synopsis header text and review stars
+ */
 class Scene2Part4 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,12 +43,30 @@ class Scene2Part4 : AppCompatActivity() {
                 setImageDrawable(bottomRightAnimationForward)
             }
 
+        root.setTransitionListener(object : MotionLayout.TransitionListener {
+            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+            }
+
+            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
+            }
+
+            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, progress: Float) {
+                val color =
+                    ColorUtils.setAlphaComponent(Color.WHITE, ((progress * 100) * 2.55).toInt())
+                bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+            }
+
+            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
+            }
+
+        })
+
         topLeftAnimationForward?.registerAnimationCallback(object :
             Animatable2Compat.AnimationCallback() {
             override fun onAnimationEnd(drawable: Drawable?) {
                 topLeftImageView.setImageDrawable(topLeftAnimationReverse)
                 topLeftAnimationReverse?.start()
-
             }
         })
         topLeftAnimationReverse?.registerAnimationCallback(object :
@@ -70,4 +96,8 @@ class Scene2Part4 : AppCompatActivity() {
         bottomRightAnimationForward?.start()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        root.setTransitionListener(null)
+    }
 }
