@@ -11,7 +11,7 @@
             <group android:name="end">
                 <path
                     android:name="path_3"
-                    android:fillColor="#1F1D1E"
+                    android:fillColor="@color/black87"
                     android:pathData="M 11.5 150 C 58.5 141.5 82.5 136.5 90 116 C 97.5 95.5 60 95 60 70 C 60 45 89 29 111.5 34 C 134 39 150 1 150 1 L 150 150 L 11.5 150 Z"
                     android:strokeWidth="1" />
             </group>
