@@ -6,9 +6,7 @@
         android:id="@+id/startToEnd"
         app:constraintSetEnd="@+id/end"
         app:constraintSetStart="@+id/start">
-        <OnSwipe
-            app:clickAction="transitionToEnd"
-            app:target="@id/bookCover" />
+        <OnSwipe app:target="@id/bookCover" />
         <KeyFrameSet>
             <KeyAttribute
                 android:alpha="0"
