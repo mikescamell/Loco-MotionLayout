@@ -57,40 +57,16 @@
                 app:target="@id/reviewsText" />
             <KeyAttribute
                 android:alpha="0"
-                android:translationY="24dp"
                 app:framePosition="80"
                 app:target="@id/favourite" />
-            <KeyPosition
-                app:curveFit="linear"
-                app:framePosition="0"
-                app:keyPositionType="deltaRelative"
-                app:percentX="1"
-                app:target="@+id/favourite"
-                app:transitionEasing="decelerate" />
             <KeyAttribute
                 android:alpha="0"
-                android:translationY="48dp"
                 app:framePosition="85"
                 app:target="@id/bookmark" />
-            <KeyPosition
-                app:curveFit="linear"
-                app:framePosition="0"
-                app:keyPositionType="deltaRelative"
-                app:percentX="1"
-                app:target="@+id/bookmark"
-                app:transitionEasing="decelerate" />
             <KeyAttribute
                 android:alpha="0"
-                android:translationY="72dp"
                 app:framePosition="90"
                 app:target="@id/readButton" />
-            <KeyPosition
-                app:curveFit="linear"
-                app:framePosition="0"
-                app:keyPositionType="deltaRelative"
-                app:percentX="1"
-                app:target="@+id/readButton"
-                app:transitionEasing="decelerate" />
         </KeyFrameSet>
     </Transition>
 
