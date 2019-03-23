@@ -47,5 +47,8 @@ class MainActivity : AppCompatActivity() {
         scene2Part5Button.setOnClickListener {
             startActivity(Intent(this, Scene2Part5::class.java))
         }
+        scene2Part6Button.setOnClickListener {
+            startActivity(Intent(this, Scene2Part6::class.java))
+        }
     }
 }
