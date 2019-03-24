@@ -125,12 +125,12 @@
             <Layout
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/bookSynopsisCard"
+                app:layout_constraintTop_toBottomOf="@id/bookSynopsisCard"
                 app:layout_width="150dp" />
             <Transform
                 app:elevation="4dp"
                 app:rotationX="-55"
-                app:translationY="260dp" />
+                app:translationY="-24dp" />
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
                 app:customColorValue="@color/transparent" />
