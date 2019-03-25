@@ -93,6 +93,12 @@
             android:layout_height="wrap_content"
             android:text="Scene 2 - Part 7" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/combinedScenePart1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Combined Scene - Part 1" />
+
     </LinearLayout>
 
 </ScrollView>
