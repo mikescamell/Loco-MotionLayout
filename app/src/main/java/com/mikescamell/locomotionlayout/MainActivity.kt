@@ -59,5 +59,8 @@ class MainActivity : AppCompatActivity() {
         combinedScenePart1.setOnClickListener {
             startActivity(Intent(this, CombinedScenePart1::class.java))
         }
+        combinedScenePart2.setOnClickListener {
+            startActivity(Intent(this, CombinedScenePart2::class.java))
+        }
     }
 }

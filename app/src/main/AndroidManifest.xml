@@ -33,6 +33,7 @@
         <activity android:name=".Scene2Part6" />
         <activity android:name=".Scene2Part7" />
         <activity android:name=".CombinedScenePart1" />
+        <activity android:name=".CombinedScenePart2" />
     </application>
 
 </manifest>
