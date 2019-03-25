@@ -68,7 +68,6 @@
                 app:translationY="-24dp" />
         </Constraint>
 
-
     </ConstraintSet>
 
 </MotionScene>

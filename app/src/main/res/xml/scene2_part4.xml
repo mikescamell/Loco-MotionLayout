@@ -90,6 +90,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bookSynopsisCard"
+                app:layout_height="wrap_content"
                 app:layout_width="150dp" />
             <Transform
                 app:elevation="4dp"
@@ -168,13 +169,13 @@
             <Layout
                 app:layout_constraintBottom_toBottomOf="@id/bookSynopsisCard"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_height="wrap_content"
                 app:layout_marginStart="24dp"
                 app:layout_width="120dp" />
             <Transform
                 app:elevation="12dp"
                 app:rotationX="0"
-                app:translationY="24dp"
-                app:translationZ="0dp" />
+                app:translationY="24dp" />
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
                 app:customColorValue="#000000" />

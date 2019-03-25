@@ -8,7 +8,7 @@
         app:constraintSetStart="@+id/start"
         app:duration="1000">
         <OnClick
-            app:clickAction="transitionToEnd"
+            app:clickAction="toggle"
             app:target="@+id/bookSynopsisCard" />
     </Transition>
 
@@ -66,16 +66,16 @@
             <Layout
                 app:layout_constraintBottom_toBottomOf="@id/bookSynopsisCard"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_height="wrap_content"
                 app:layout_marginStart="24dp"
                 app:layout_width="120dp" />
             <Transform
                 app:elevation="12dp"
                 app:rotationX="0"
-                app:translationY="24dp"
-                app:translationZ="0dp" />
+                app:translationY="24dp" />
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
-                app:customColorValue="#000000" />
+                app:customColorValue="@color/black" />
         </Constraint>
 
     </ConstraintSet>
