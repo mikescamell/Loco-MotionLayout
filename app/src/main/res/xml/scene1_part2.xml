@@ -30,13 +30,13 @@
 
         <Constraint android:id="@+id/bookCover">
             <Layout
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_height="wrap_content"
                 app:layout_width="150dp" />
-            <Transform
-                app:rotationX="-55"
-                app:translationY="260dp" />
+            <Transform app:rotationX="-55" />
         </Constraint>
 
     </ConstraintSet>
