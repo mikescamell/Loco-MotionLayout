@@ -13,11 +13,11 @@ import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.android.synthetic.main.layout2_part4.*
 
-class Scene2Part5 : AppCompatActivity() {
+class CombinedScenePart3 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout2_part5)
+        setContentView(R.layout.layout_combined_part3)
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         setLightStatusBar(window.decorView)
@@ -41,20 +41,36 @@ class Scene2Part5 : AppCompatActivity() {
             }
 
         root.setTransitionListener(object : MotionLayout.TransitionListener {
-            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+            override fun onTransitionTrigger(
+                motionLayout: MotionLayout?,
+                startId: Int,
+                endId: Boolean,
+                progress: Float
+            ) {
             }
 
-            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
+            override fun onTransitionStarted(
+                motionLayout: MotionLayout?,
+                startId: Int,
+                endId: Int
+            ) {
             }
 
-            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, progress: Float) {
-                val color =
-                    ColorUtils.setAlphaComponent(Color.WHITE, calculateProgressAlpha(progress))
-                bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
-                bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+            override fun onTransitionChange(
+                motionLayout: MotionLayout?,
+                startId: Int,
+                endId: Int,
+                progress: Float
+            ) {
+                if (startId == R.id.middle) {
+                    val color =
+                        ColorUtils.setAlphaComponent(Color.WHITE, calculateProgressAlpha(progress))
+                    bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                    bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                }
             }
 
-            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
+            override fun onTransitionCompleted(motionLayout: MotionLayout?, p1: Int) {
             }
         })
 

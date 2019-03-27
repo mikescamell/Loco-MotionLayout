@@ -64,7 +64,7 @@ class CombinedScenePart2 : AppCompatActivity() {
             ) {
                 if (startId == R.id.middle) {
                     val color =
-                        ColorUtils.setAlphaComponent(Color.WHITE, ((progress * 100) * 2.55).toInt())
+                        ColorUtils.setAlphaComponent(Color.WHITE, calculateProgressAlpha(progress))
                     bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                     bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                 }

@@ -4,7 +4,8 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/scene_combined_part2">
+    app:layoutDescription="@xml/scene_combined_part3"
+    app:motionDebug="SHOW_PATH">
 
     <TextView
         android:id="@+id/genreCircleFantasy"
@@ -59,6 +60,36 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.06" />
+
+    <ImageView
+        android:id="@+id/bookCoverLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/filthy_rich_clients" />
+
+    <ImageView
+        android:id="@+id/bookCoverRight"
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/happy" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bookSynopsisLeft"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/turquoise"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bookSynopsisRight"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/vibrant_blue"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bookSynopsisCard"

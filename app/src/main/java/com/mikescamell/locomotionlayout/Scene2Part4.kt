@@ -52,7 +52,7 @@ class Scene2Part4 : AppCompatActivity() {
 
             override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, progress: Float) {
                 val color =
-                    ColorUtils.setAlphaComponent(Color.WHITE, ((progress * 100) * 2.55).toInt())
+                    ColorUtils.setAlphaComponent(Color.WHITE, calculateProgressAlpha(progress))
                 bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                 bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
             }
