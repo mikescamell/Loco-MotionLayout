@@ -418,35 +418,14 @@
 
         <Constraint android:id="@+id/favourite">
             <PropertySet app:alpha="0" />
-            <Layout
-                android:layout_marginStart="24dp"
-                app:layout_constraintEnd_toStartOf="@id/bookmark"
-                app:layout_constraintStart_toEndOf="@+id/bookCover"
-                app:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_height="wrap_content"
-                app:layout_width="wrap_content" />
         </Constraint>
 
         <Constraint android:id="@+id/bookmark">
             <PropertySet app:alpha="0" />
-            <Layout
-                app:layout_constraintEnd_toStartOf="@id/readButton"
-                app:layout_constraintStart_toEndOf="@+id/favourite"
-                app:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_height="wrap_content"
-                app:layout_width="wrap_content" />
         </Constraint>
 
         <Constraint android:id="@+id/readButton">
             <PropertySet app:alpha="0" />
-            <Layout
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/bookmark"
-                app:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_height="40dp"
-                app:layout_marginEnd="16dp"
-                app:layout_marginStart="16dp"
-                app:layout_width="96dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookDetailScrollView">
@@ -575,36 +554,14 @@
 
         <Constraint android:id="@+id/favourite">
             <PropertySet app:alpha="1" />
-            <Layout
-                app:layout_constraintBottom_toBottomOf="@id/bookSynopsisCard"
-                app:layout_constraintEnd_toStartOf="@id/bookmark"
-                app:layout_constraintStart_toEndOf="@+id/bookCover"
-                app:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_height="wrap_content"
-                app:layout_marginStart="8dp"
-                app:layout_width="wrap_content" />
         </Constraint>
 
         <Constraint android:id="@+id/bookmark">
             <PropertySet app:alpha="1" />
-            <Layout
-                app:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_constraintEnd_toStartOf="@id/readButton"
-                app:layout_constraintStart_toEndOf="@+id/favourite"
-                app:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_height="wrap_content"
-                app:layout_width="wrap_content" />
         </Constraint>
 
         <Constraint android:id="@+id/readButton">
             <PropertySet app:alpha="1" />
-            <Layout
-                app:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/bookmark"
-                app:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
-                app:layout_height="40dp"
-                app:layout_width="96dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookDetailScrollView">

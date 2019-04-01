@@ -212,14 +212,22 @@
         app:layout_constraintTop_toTopOf="@id/star1"
         app:srcCompat="@drawable/ic_star_grey_24dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/favourite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_heart"
-        app:backgroundTint="@color/white"
-        app:elevation="12dp"
-        app:fabSize="mini" />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/readButton"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="96dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/lora_regular"
+        android:stateListAnimator="@animator/read_button_state_list"
+        android:translationZ="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bookmark"
+        android:text="@string/read"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
+        app:backgroundTint="#19C2C1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/bookmark"
@@ -227,20 +235,26 @@
         android:layout_height="wrap_content"
         app:backgroundTint="@color/white"
         app:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
+        app:layout_constraintEnd_toStartOf="@id/readButton"
+        app:layout_constraintStart_toEndOf="@+id/favourite"
+        app:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
         app:fabSize="mini"
         app:srcCompat="@drawable/ic_bookmark_border_grey_24dp" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/readButton"
-        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/favourite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/lora_regular"
-        android:stateListAnimator="@animator/read_button_state_list"
-        android:text="@string/read"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        app:backgroundTint="#19C2C1" />
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/bookSynopsisCard"
+        app:layout_constraintEnd_toStartOf="@id/bookmark"
+        app:layout_constraintStart_toEndOf="@id/bookCover"
+        app:layout_constraintTop_toBottomOf="@id/bookSynopsisCard"
+        android:src="@drawable/ic_heart"
+        app:backgroundTint="@color/white"
+        app:elevation="12dp"
+        app:fabSize="mini" />
 
     <include layout="@layout/scroll_view_book_info" />
 
