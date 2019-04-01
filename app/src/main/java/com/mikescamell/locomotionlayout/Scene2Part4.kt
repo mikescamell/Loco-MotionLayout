@@ -44,22 +44,30 @@ class Scene2Part4 : AppCompatActivity() {
             }
 
         root.setTransitionListener(object : MotionLayout.TransitionListener {
-            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+            override fun onTransitionTrigger(
+                motionLayout: MotionLayout, startId: Int, endId: Boolean, progress: Float
+            ) {
             }
 
-            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
+            override fun onTransitionStarted(
+                motionLayout: MotionLayout, startId: Int, endId: Int
+            ) {
             }
 
-            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, progress: Float) {
+            override fun onTransitionChange(
+                motionLayout: MotionLayout,
+                startId: Int,
+                endId: Int,
+                progress: Float
+            ) {
                 val color =
                     ColorUtils.setAlphaComponent(Color.WHITE, calculateProgressAlpha(progress))
                 bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
                 bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
             }
 
-            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
+            override fun onTransitionCompleted(motionLayout: MotionLayout, currentId: Int) {
             }
-
         })
 
         topLeftAnimationForward?.registerAnimationCallback(object :
