@@ -6,7 +6,7 @@
         android:id="@+id/startToMiddle"
         app:constraintSetEnd="@+id/middle"
         app:constraintSetStart="@+id/start"
-        app:duration="10000">
+        app:duration="1000">
         <OnClick
             app:clickAction="toggle"
             app:target="@id/bookCover" />
