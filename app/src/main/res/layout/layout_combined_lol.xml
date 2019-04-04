@@ -6,6 +6,60 @@
     android:layout_height="match_parent"
     app:layoutDescription="@xml/scene_combined_lol">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fantasyGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/novelGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horrorGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <TextView
+        android:id="@+id/genreCircleFantasy"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/ic_genre_circle"
+        android:fontFamily="@font/lora_italic"
+        android:gravity="center"
+        android:text="@string/fantasy"
+        android:textColor="@color/white87"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/genreCircleNovel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_genre_circle"
+        android:fontFamily="@font/lora_italic"
+        android:gravity="center"
+        android:text="@string/novel"
+        android:textColor="@color/white87"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/genreCircleHorror"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/ic_genre_circle"
+        android:fontFamily="@font/lora_italic"
+        android:gravity="center"
+        android:text="@string/horror"
+        android:textColor="@color/white87"
+        android:textSize="16sp" />
+
     <ImageView
         android:id="@+id/bookCoverLeft"
         android:layout_width="wrap_content"
@@ -20,6 +74,88 @@
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/happy" />
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bookSynopsisLeft"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/crazyPink"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bookSynopsisRight"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/vibrant_blue"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bookSynopsisCard"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bookSynopsisFluidTopLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/bookSynopsisFluidBottomRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/bookSynopsisTitle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/nimbus_roman_medium"
+        android:gravity="center|end"
+        android:text="@string/synopsis"
+        android:textAppearance="?textAppearanceHeadline6"
+        android:textColor="@color/black87"
+        app:layout_constraintEnd_toEndOf="@id/bookSynopsisCard"
+        app:layout_constraintTop_toTopOf="@id/bookSynopsisCard" />
+
+    <TextView
+        android:id="@+id/bookSynopsisText"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nimbus_roman_regular"
+        android:lineSpacingExtra="4dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="32dp"
+        android:text="@string/synopsis_text"
+        android:textAppearance="?textAppearanceBody1"
+        android:textColor="@color/black87"
+        android:textSize="12sp"
+        android:maxLines="11"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookSynopsisTitle" />
+
     <ImageView
         android:id="@+id/bookCover"
         android:layout_width="wrap_content"
@@ -29,6 +165,52 @@
         android:focusableInTouchMode="true"
         android:outlineProvider="bounds"
         android:src="@drawable/filthy_rich_clients" />
+
+    <TextView
+        android:id="@+id/bookType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/lora_italic"
+        android:text="@string/novel"
+        android:textSize="12sp"
+        android:translationY="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bookCover"
+        app:layout_constraintTop_toTopOf="@+id/bookCover" />
+
+    <TextView
+        android:id="@+id/bookName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/nimbus_roman_medium"
+        android:text="Filthy Rich Clients"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:translationY="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bookCover"
+        app:layout_constraintTop_toBottomOf="@+id/bookType" />
+
+    <TextView
+        android:id="@+id/bookAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/lora_italic"
+        android:text="by Chet Haase &amp; Romain Guy"
+        android:textSize="14sp"
+        android:translationY="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bookCover"
+        app:layout_constraintTop_toBottomOf="@+id/bookName" />
 
     <ImageView
         android:id="@+id/star1"
@@ -98,120 +280,6 @@
         app:srcCompat="@drawable/ic_star_grey_24dp" />
 
     <TextView
-        android:id="@+id/genreCircleFantasy"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:background="@drawable/ic_genre_circle"
-        android:fontFamily="@font/lora_italic"
-        android:gravity="center"
-        android:text="@string/fantasy"
-        android:textColor="@color/white87"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/genreCircleNovel"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/ic_genre_circle"
-        android:fontFamily="@font/lora_italic"
-        android:gravity="center"
-        android:text="@string/novel"
-        android:textColor="@color/white87"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/genreCircleHorror"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/ic_genre_circle"
-        android:fontFamily="@font/lora_italic"
-        android:gravity="center"
-        android:text="@string/horror"
-        android:textColor="@color/white87"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/bookSynopsisTitle"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/nimbus_roman_medium"
-        android:gravity="center|end"
-        android:text="@string/synopsis"
-        android:textAppearance="?textAppearanceHeadline6"
-        android:textColor="@color/black87"
-        app:layout_constraintEnd_toEndOf="@id/bookSynopsisCard"
-        app:layout_constraintTop_toTopOf="@id/bookSynopsisCard" />
-
-    <TextView
-        android:id="@+id/bookSynopsisText"
-        android:layout_width="300dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/nimbus_roman_regular"
-        android:lineSpacingExtra="4dp"
-        android:paddingStart="32dp"
-        android:paddingEnd="32dp"
-        android:paddingBottom="32dp"
-        android:text="@string/synopsis_text"
-        android:textAppearance="?textAppearanceBody1"
-        android:textColor="@color/black87"
-        android:textSize="12sp"
-        app:layout_constrainedHeight="true"
-        app:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bookSynopsisTitle" />
-
-    <TextView
-        android:id="@+id/bookType"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="16dp"
-        android:elevation="8dp"
-        android:fontFamily="@font/lora_italic"
-        android:text="@string/novel"
-        android:textSize="12sp"
-        android:translationY="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/bookCover"
-        app:layout_constraintTop_toTopOf="@+id/bookCover" />
-
-    <TextView
-        android:id="@+id/bookName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="16dp"
-        android:elevation="8dp"
-        android:fontFamily="@font/nimbus_roman_medium"
-        android:text="Filthy Rich Clients"
-        android:textColor="#000000"
-        android:textSize="22sp"
-        android:translationY="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/bookCover"
-        app:layout_constraintTop_toBottomOf="@+id/bookType" />
-
-    <TextView
-        android:id="@+id/bookAuthor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="16dp"
-        android:elevation="8dp"
-        android:fontFamily="@font/lora_italic"
-        android:text="by Chet Haase &amp; Romain Guy"
-        android:textSize="14sp"
-        android:translationY="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/bookCover"
-        app:layout_constraintTop_toBottomOf="@+id/bookName" />
-
-    <TextView
         android:id="@+id/reviewsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -228,73 +296,6 @@
         app:layout_constraintStart_toEndOf="@id/star5"
         app:layout_constraintTop_toTopOf="@id/star1"
         app:srcCompat="@drawable/ic_star_grey_24dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/fantasyGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.76" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/novelGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.21" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horrorGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.06" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bookSynopsisLeft"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:cardBackgroundColor="@color/crazyPink"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bookSynopsisRight"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:cardBackgroundColor="@color/vibrant_blue"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bookSynopsisCard"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/bookSynopsisFluidTopLeft"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/bookSynopsisFluidBottomRight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/readButton"

@@ -58,6 +58,7 @@
         android:fontFamily="@font/nimbus_roman_regular"
         android:lineSpacingExtra="4dp"
         android:paddingStart="32dp"
+        android:maxLines="11"
         android:paddingEnd="32dp"
         android:paddingBottom="32dp"
         android:text="@string/synopsis_text"

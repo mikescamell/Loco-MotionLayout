@@ -115,6 +115,7 @@
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
         android:paddingBottom="32dp"
+        android:maxLines="11"
         android:text="@string/synopsis_text"
         android:textAppearance="?textAppearanceBody1"
         android:textColor="@color/white87"
