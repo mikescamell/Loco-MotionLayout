@@ -2,6 +2,7 @@ package com.mikescamell.locomotionlayout
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
@@ -12,6 +13,9 @@ class Scene1Part7 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout1_part7)
+
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        setLightStatusBar(window.decorView)
 
         val topLeftAnimationForward =
             AnimatedVectorDrawableCompat.create(this, R.drawable.top_left_liquid_forward)
