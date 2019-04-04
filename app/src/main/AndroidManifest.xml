@@ -35,6 +35,7 @@
         <activity android:name=".CombinedScenePart1" />
         <activity android:name=".CombinedScenePart2" />
         <activity android:name=".CombinedScenePart3" />
+        <activity android:name=".CombinedSceneLol" />
     </application>
 
 </manifest>

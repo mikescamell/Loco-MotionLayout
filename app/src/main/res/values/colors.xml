@@ -13,5 +13,6 @@
     <color name="black87">#DE000000</color>
     <color name="transparent">#00000000</color>
     <color name="turquoise">#0093A7</color>
+    <color name="turquoise87">#DE0093A7</color>
     <color name="vibrant_blue">#40B4E5</color>
 </resources>
