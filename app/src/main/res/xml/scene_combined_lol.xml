@@ -7,25 +7,28 @@
         app:constraintSetEnd="@+id/middle"
         app:constraintSetStart="@+id/start"
         app:duration="1000">
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/bookCover" />
         <KeyFrameSet>
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="70"
-                app:target="@id/bookSynopsisTitle" />
+                app:motionTarget="@id/bookSynopsisTitle" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="70"
-                app:target="@id/bookSynopsisText" />
+                app:motionTarget="@id/bookSynopsisText" />
             <KeyAttribute
                 app:framePosition="50"
-                app:target="@id/bookCover">
+                app:motionTarget="@id/bookCover">
                 <CustomAttribute
                     app:attributeName="outlineSpotShadowColor"
                     app:customColorValue="@color/transparent" />
             </KeyAttribute>
             <KeyAttribute
                 app:framePosition="50"
-                app:target="@id/bookSynopsisCard">
+                app:motionTarget="@id/bookSynopsisCard">
                 <CustomAttribute
                     app:attributeName="outlineSpotShadowColor"
                     app:customColorValue="@color/transparent" />
@@ -34,18 +37,15 @@
                 app:framePosition="75"
                 app:keyPositionType="pathRelative"
                 app:percentX="0"
-                app:target="@id/bookSynopsisLeft"
+                app:motionTarget="@id/bookSynopsisLeft"
                 app:transitionEasing="decelerate" />
             <KeyPosition
                 app:framePosition="75"
                 app:keyPositionType="pathRelative"
                 app:percentX="0"
-                app:target="@id/bookSynopsisRight"
+                app:motionTarget="@id/bookSynopsisRight"
                 app:transitionEasing="decelerate" />
         </KeyFrameSet>
-        <OnClick
-            app:clickAction="toggle"
-            app:target="@id/bookCover" />
     </Transition>
 
     <Transition
@@ -53,103 +53,103 @@
         app:constraintSetEnd="@+id/end"
         app:constraintSetStart="@+id/middle"
         app:duration="1000">
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@+id/bookSynopsisCard" />
         <KeyFrameSet>
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="50"
-                app:target="@id/bookSynopsisLeft" />
+                app:motionTarget="@id/bookSynopsisLeft" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="50"
-                app:target="@id/bookSynopsisRight" />
+                app:motionTarget="@id/bookSynopsisRight" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="10"
-                app:target="@id/bookSynopsisTitle" />
+                app:motionTarget="@id/bookSynopsisTitle" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="10"
-                app:target="@id/bookSynopsisText" />
+                app:motionTarget="@id/bookSynopsisText" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/bookType" />
+                app:motionTarget="@id/bookType" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/bookAuthor" />
+                app:motionTarget="@id/bookAuthor" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/bookName" />
+                app:motionTarget="@id/bookName" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/star1" />
+                app:motionTarget="@id/star1" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/star2" />
+                app:motionTarget="@id/star2" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/star3" />
+                app:motionTarget="@id/star3" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/star4" />
+                app:motionTarget="@id/star4" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/star5" />
+                app:motionTarget="@id/star5" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="95"
-                app:target="@id/reviewsText" />
+                app:motionTarget="@id/reviewsText" />
             <KeyAttribute
                 android:alpha="0"
                 android:translationY="24dp"
                 app:framePosition="80"
-                app:target="@id/favourite" />
+                app:motionTarget="@id/favourite" />
             <KeyAttribute
                 android:alpha="0"
                 android:translationY="48dp"
                 app:framePosition="85"
-                app:target="@id/bookmark" />
+                app:motionTarget="@id/bookmark" />
             <KeyAttribute
                 android:alpha="0"
                 android:translationY="72dp"
                 app:framePosition="90"
-                app:target="@id/readButton" />
+                app:motionTarget="@id/readButton" />
             <KeyAttribute
                 android:alpha="0"
                 app:framePosition="50"
-                app:target="@id/bookDetailScrollView" />
+                app:motionTarget="@id/bookDetailScrollView" />
             <KeyPosition
                 app:curveFit="linear"
                 app:framePosition="0"
                 app:keyPositionType="deltaRelative"
                 app:percentX="1"
-                app:target="@+id/favourite"
+                app:motionTarget="@+id/favourite"
                 app:transitionEasing="decelerate" />
             <KeyPosition
                 app:curveFit="linear"
                 app:framePosition="0"
                 app:keyPositionType="deltaRelative"
                 app:percentX="1"
-                app:target="@+id/bookmark"
+                app:motionTarget="@+id/bookmark"
                 app:transitionEasing="decelerate" />
             <KeyPosition
                 app:curveFit="linear"
                 app:framePosition="0"
                 app:keyPositionType="deltaRelative"
                 app:percentX="1"
-                app:target="@+id/readButton"
+                app:motionTarget="@+id/readButton"
                 app:transitionEasing="decelerate" />
         </KeyFrameSet>
-        <OnClick
-            app:clickAction="toggle"
-            app:target="@+id/bookSynopsisCard" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -185,7 +185,7 @@
                 app:layout_height="270dp"
                 app:layout_width="wrap_content" />
             <Motion app:transitionEasing="decelerate" />
-            <Transform app:translationX="32dp" />
+            <Transform android:translationX="32dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCoverRight">
@@ -197,7 +197,7 @@
                 app:layout_height="270dp"
                 app:layout_width="wrap_content" />
             <Motion app:transitionEasing="decelerate" />
-            <Transform app:translationX="-32dp" />
+            <Transform android:translationX="-32dp" />
         </Constraint>
 
         <Constraint android:id="@+id/genreCircleFantasy">
@@ -209,7 +209,7 @@
                 app:layout_height="160dp"
                 app:layout_width="160dp" />
             <Motion app:transitionEasing="decelerate" />
-            <Transform app:translationY="24dp" />
+            <Transform android:translationY="24dp" />
         </Constraint>
 
         <Constraint android:id="@+id/genreCircleNovel">
@@ -221,7 +221,7 @@
                 app:layout_height="80dp"
                 app:layout_width="80dp" />
             <Motion app:transitionEasing="decelerate" />
-            <Transform app:translationY="12dp" />
+            <Transform android:translationY="12dp" />
         </Constraint>
 
         <Constraint android:id="@+id/genreCircleHorror">
@@ -232,7 +232,7 @@
                 app:layout_height="120dp"
                 app:layout_width="120dp" />
             <Motion app:transitionEasing="decelerate" />
-            <Transform app:translationY="-24dp" />
+            <Transform android:translationY="-24dp" />
         </Constraint>
 
         <Constraint android:id="@+id/blueSquare">
@@ -244,8 +244,8 @@
                 app:layout_height="300dp"
                 app:layout_width="300dp" />
             <Transform
-                app:rotationX="0"
-                app:translationX="24dp" />
+                android:rotationX="0"
+                android:translationX="24dp" />
         </Constraint>
 
         <Constraint android:id="@+id/greenSquare">
@@ -257,8 +257,8 @@
                 app:layout_height="300dp"
                 app:layout_width="300dp" />
             <Transform
-                app:rotationX="0"
-                app:translationX="-24dp" />
+                android:rotationX="0"
+                android:translationX="-24dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisCard">
@@ -272,7 +272,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_height="140dp"
                 app:layout_width="140dp" />
-            <Transform app:rotationX="-55" />
+            <Transform android:rotationX="-55" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisTitle">
@@ -285,7 +285,7 @@
                 app:layout_marginTop="32dp"
                 app:layout_width="300dp" />
             <PropertySet app:alpha="0" />
-            <Transform app:rotationX="-55" />
+            <Transform android:rotationX="-55" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisText">
@@ -297,7 +297,7 @@
                 app:layout_height="0dp"
                 app:layout_width="300dp" />
             <PropertySet app:alpha="0" />
-            <Transform app:rotationX="-55" />
+            <Transform android:rotationX="-55" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -313,8 +313,8 @@
                 app:layout_height="300dp"
                 app:layout_width="wrap_content" />
             <Transform
-                app:elevation="4dp"
-                app:rotationX="0" />
+                android:elevation="4dp"
+                android:rotationX="0" />
         </Constraint>
 
         <Constraint android:id="@+id/bookType">
@@ -386,7 +386,7 @@
                 app:layout_height="160dp"
                 app:layout_width="160dp" />
             <Motion app:transitionEasing="accelerate" />
-            <Transform app:translationY="-1dp" />
+            <Transform android:translationY="-1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/genreCircleNovel">
@@ -397,7 +397,7 @@
                 app:layout_height="80dp"
                 app:layout_width="80dp" />
             <Motion app:transitionEasing="accelerate" />
-            <Transform app:translationY="-1dp" />
+            <Transform android:translationY="-1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/genreCircleHorror">
@@ -408,7 +408,7 @@
                 app:layout_height="120dp"
                 app:layout_width="120dp" />
             <Motion app:transitionEasing="accelerate" />
-            <Transform app:translationY="-1dp" />
+            <Transform android:translationY="-1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisLeft">
@@ -442,7 +442,7 @@
                 app:layout_height="270dp"
                 app:layout_width="wrap_content" />
             <Motion app:transitionEasing="accelerate" />
-            <Transform app:translationX="1dp" />
+            <Transform android:translationX="1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCoverRight">
@@ -454,7 +454,7 @@
                 app:layout_height="270dp"
                 app:layout_width="wrap_content" />
             <Motion app:transitionEasing="accelerate" />
-            <Transform app:translationX="1dp" />
+            <Transform android:translationX="1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -466,8 +466,8 @@
                 app:layout_height="300dp"
                 app:layout_width="300dp" />
             <Transform
-                app:rotationX="0"
-                app:translationX="24dp" />
+                android:rotationX="0"
+                android:translationX="24dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisCard">
@@ -485,17 +485,17 @@
                 app:layout_constraintVertical_bias="0.3"
                 app:layout_height="300dp"
                 app:layout_width="300dp" />
-            <Transform app:elevation="4dp" />
+            <Transform android:elevation="4dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisTitle">
             <PropertySet app:alpha="1" />
-            <Transform app:elevation="4dp" />
+            <Transform android:elevation="4dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisText">
             <PropertySet app:alpha="1" />
-            <Transform app:elevation="4dp" />
+            <Transform android:elevation="4dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -509,9 +509,9 @@
                 app:layout_height="wrap_content"
                 app:layout_width="150dp" />
             <Transform
-                app:elevation="4dp"
-                app:rotationX="-55"
-                app:translationY="-24dp" />
+                android:elevation="4dp"
+                android:rotationX="-55"
+                android:translationY="-48dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookType">
@@ -603,7 +603,7 @@
                 app:layout_constraintStart_toEndOf="@id/fantasyGuideline"
                 app:layout_height="160dp"
                 app:layout_width="160dp" />
-            <Transform app:translationY="-1dp" />
+            <Transform android:translationY="-1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/genreCircleNovel">
@@ -613,7 +613,7 @@
                 app:layout_constraintStart_toEndOf="@id/novelGuideline"
                 app:layout_height="80dp"
                 app:layout_width="80dp" />
-            <Transform app:translationY="-1dp" />
+            <Transform android:translationY="-1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/genreCircleHorror">
@@ -624,8 +624,8 @@
                 app:layout_height="120dp"
                 app:layout_width="120dp" />
             <Transform
-                app:elevation="0dp"
-                app:translationY="-1dp" />
+                android:elevation="0dp"
+                android:translationY="-1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisLeft">
@@ -664,7 +664,7 @@
                 app:layout_constraintVertical_bias="0.32"
                 app:layout_height="270dp"
                 app:layout_width="wrap_content" />
-            <Transform app:translationX="-1dp" />
+            <Transform android:translationX="-1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCoverRight">
@@ -675,7 +675,7 @@
                 app:layout_constraintVertical_bias="0.32"
                 app:layout_height="270dp"
                 app:layout_width="wrap_content" />
-            <Transform app:translationX="1dp" />
+            <Transform android:translationX="1dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisCard">
@@ -692,17 +692,17 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_height="0dp"
                 app:layout_width="0dp" />
-            <Transform app:elevation="8dp" />
+            <Transform android:elevation="8dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisTitle">
             <PropertySet app:alpha="0" />
-            <Transform app:elevation="8dp" />
+            <Transform android:elevation="8dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisText">
             <PropertySet app:alpha="0" />
-            <Transform app:elevation="8dp" />
+            <Transform android:elevation="8dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -716,9 +716,9 @@
                 app:layout_marginStart="24dp"
                 app:layout_width="120dp" />
             <Transform
-                app:elevation="12dp"
-                app:translationY="24dp"
-                app:translationZ="0dp" />
+                android:elevation="12dp"
+                android:translationY="24dp"
+                android:translationZ="0dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookType">
