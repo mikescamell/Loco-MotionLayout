@@ -8,7 +8,7 @@
         app:constraintSetStart="@+id/start"
         app:duration="1000">
         <OnClick
-            app:clickAction="transitionToEnd"
+            app:clickAction="toggle"
             app:targetId="@+id/bookSynopsisCard" />
     </Transition>
 
