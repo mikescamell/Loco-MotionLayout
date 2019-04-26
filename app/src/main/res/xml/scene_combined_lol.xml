@@ -300,6 +300,9 @@
             <Transform android:rotationX="-55" />
         </Constraint>
 
+        <!--The translationX value here is a hack!
+            alpha4 changed something with chains which pushes the book cover to the left, even though it's not part of the chain
+            TODO ask NR & JH-->
         <Constraint android:id="@+id/bookCover">
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
@@ -314,6 +317,7 @@
                 app:layout_width="wrap_content" />
             <Transform
                 android:elevation="4dp"
+                android:translationX="64dp"
                 android:rotationX="0" />
         </Constraint>
 
@@ -457,19 +461,6 @@
             <Transform android:translationX="1dp" />
         </Constraint>
 
-        <Constraint android:id="@+id/bookCover">
-            <Layout
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.3"
-                app:layout_height="300dp"
-                app:layout_width="300dp" />
-            <Transform
-                android:rotationX="0"
-                android:translationX="24dp" />
-        </Constraint>
-
         <Constraint android:id="@+id/bookSynopsisCard">
             <CustomAttribute
                 app:attributeName="radius"
@@ -498,6 +489,9 @@
             <Transform android:elevation="4dp" />
         </Constraint>
 
+        <!--The translationX value here is a hack!
+            alpha4 changed something with chains which pushes the book cover to the left, even though it's not part of the chain
+            TODO ask NR & JH-->
         <Constraint android:id="@+id/bookCover">
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
@@ -511,6 +505,7 @@
             <Transform
                 android:elevation="4dp"
                 android:rotationX="-55"
+                android:translationX="24dp"
                 android:translationY="-48dp" />
         </Constraint>
 
