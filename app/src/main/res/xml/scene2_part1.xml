@@ -8,8 +8,8 @@
         app:constraintSetStart="@+id/start"
         app:duration="1000">
         <OnClick
-            app:clickAction="transitionToEnd"
-            app:target="@+id/bookSynopsisCard" />
+            app:clickAction="toggle"
+            app:targetId="@+id/bookSynopsisCard" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -26,7 +26,7 @@
             <CustomAttribute
                 app:attributeName="radius"
                 app:customDimension="16dp" />
-            <Transform app:elevation="4dp" />
+            <Transform android:elevation="4dp" />
         </Constraint>
 
     </ConstraintSet>
@@ -44,7 +44,7 @@
             <CustomAttribute
                 app:attributeName="radius"
                 app:customDimension="0dp" />
-            <Transform app:elevation="8dp" />
+            <Transform android:elevation="8dp" />
         </Constraint>
 
     </ConstraintSet>

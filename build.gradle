@@ -1,14 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.21'
+    ext.kotlin_version = '1.3.31'
     repositories {
         google()
         jcenter()
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0-alpha09'
+        classpath 'com.android.tools.build:gradle:3.5.0-alpha13'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,44 +20,10 @@ plugins {
 }
 
 ext {
-    activity = "1.0.0-alpha04"
-    annotation = "1.1.0-alpha01"
     appCompat = "1.1.0-alpha02"
-    archComponents = "2.1.0-alpha02"
-    cardview = "1.0.0"
-    constraintLayout = "2.0.0-alpha3"
-    cookieJar = "1.0.1"
-    coordinatorLayout = "1.1.0-alpha01"
+    constraintLayout = "2.0.0-alpha5"
     coreKtx = "1.1.0-alpha04"
-    coroutines = "1.1.1"
-    crash = "2.9.9"
-    dagger = "2.21"
-    epoxy = "3.3.0"
-    firebase = "16.0.7"
-    flexbox = "1.1.0"
-    fragment = "1.1.0-alpha04"
-    glide = "4.8.0"
-    groupie = "2.3.0"
     materialComponents = "1.1.0-alpha04"
-    materialSpinner = "1.3.1"
-    moshi = '1.8.0'
-    multidex = "1.0.2"
-    okhttp = '3.13.1'
-    paging = "2.1.0"
-    preference = "1.1.0-alpha03"
-    recyclerView = "1.1.0-alpha02"
-    retrofit = '2.5.0'
-    rxAndroid = '2.1.0'
-    rxBinding = "2.2.0"
-    rxJava2 = '2.2.6'
-    rxKotlin = '2.3.0'
-    rxLint = "1.7.3"
-    supportLibrary = "1.0.1"
-    tableView = "0.8.8"
-    threeTenAbp = "1.1.1"
-    timber = '4.7.1'
-    vectorDrawable = '1.1.0-alpha01'
-    workmanager = '1.0.0-beta05'
 }
 
 allprojects {

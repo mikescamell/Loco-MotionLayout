@@ -9,7 +9,8 @@
         <OnSwipe
             app:dragDirection="dragDown"
             app:touchAnchorId="@id/bookCover"
-            app:touchAnchorSide="bottom" />
+            app:touchAnchorSide="bottom"
+            app:touchRegionId="@id/bookCover" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -23,7 +24,7 @@
                 app:layout_constraintVertical_bias="0.35"
                 app:layout_height="140dp"
                 app:layout_width="140dp" />
-            <Transform app:rotationX="-55" />
+            <Transform android:rotationX="-55" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -36,8 +37,8 @@
                 app:layout_height="300dp"
                 app:layout_width="wrap_content" />
             <Transform
-                app:rotationX="0"
-                app:translationY="0dp" />
+                android:rotationX="0"
+                android:translationY="0dp" />
         </Constraint>
 
     </ConstraintSet>
@@ -53,7 +54,7 @@
                 app:layout_constraintVertical_bias="0.3"
                 app:layout_height="300dp"
                 app:layout_width="300dp" />
-            <Transform app:rotationX="0" />
+            <Transform android:rotationX="0" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -64,8 +65,8 @@
                 app:layout_height="wrap_content"
                 app:layout_width="150dp" />
             <Transform
-                app:rotationX="-55"
-                app:translationY="-24dp" />
+                android:rotationX="-55"
+                android:translationY="-48dp" />
         </Constraint>
 
     </ConstraintSet>

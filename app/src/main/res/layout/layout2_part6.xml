@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     android:layout_width="match_parent"
-    app:motionDebug="SHOW_PATH"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/scene2_part6">
 

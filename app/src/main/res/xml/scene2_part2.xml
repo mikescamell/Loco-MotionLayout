@@ -9,7 +9,7 @@
         app:duration="1000">
         <OnClick
             app:clickAction="toggle"
-            app:target="@+id/bookSynopsisCard" />
+            app:targetId="@+id/bookSynopsisCard" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -26,7 +26,7 @@
             <CustomAttribute
                 app:attributeName="radius"
                 app:customDimension="16dp" />
-            <Transform app:elevation="4dp" />
+            <Transform android:elevation="4dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -36,9 +36,9 @@
                 app:layout_constraintTop_toBottomOf="@id/bookSynopsisCard"
                 app:layout_width="150dp" />
             <Transform
-                app:elevation="4dp"
-                app:rotationX="-55"
-                app:translationY="-24dp" />
+                android:elevation="4dp"
+                android:rotationX="-55"
+                android:translationY="-48dp" />
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
                 app:customColorValue="@color/transparent" />
@@ -59,7 +59,7 @@
             <CustomAttribute
                 app:attributeName="radius"
                 app:customDimension="0dp" />
-            <Transform app:elevation="8dp" />
+            <Transform android:elevation="8dp" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -70,9 +70,9 @@
                 app:layout_marginStart="24dp"
                 app:layout_width="120dp" />
             <Transform
-                app:elevation="12dp"
-                app:rotationX="0"
-                app:translationY="24dp" />
+                android:elevation="12dp"
+                android:rotationX="0"
+                android:translationY="24dp" />
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
                 app:customColorValue="@color/black" />
