@@ -7,9 +7,11 @@
         app:constraintSetEnd="@+id/middle"
         app:constraintSetStart="@+id/start"
         app:duration="1000">
-        <OnClick
-            app:clickAction="toggle"
-            app:targetId="@id/bookCover" />
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:touchAnchorId="@id/bookCover"
+            app:touchAnchorSide="bottom"
+            app:touchRegionId="@id/bookCover" />
         <KeyFrameSet>
             <KeyAttribute
                 android:alpha="0"
@@ -22,14 +24,14 @@
             <KeyPosition
                 app:framePosition="75"
                 app:keyPositionType="pathRelative"
-                app:percentX="0"
                 app:motionTarget="@id/bookSynopsisLeft"
+                app:percentX="0"
                 app:transitionEasing="decelerate" />
             <KeyPosition
                 app:framePosition="75"
                 app:keyPositionType="pathRelative"
-                app:percentX="0"
                 app:motionTarget="@id/bookSynopsisRight"
+                app:percentX="0"
                 app:transitionEasing="decelerate" />
             <KeyAttribute
                 app:framePosition="50"
@@ -118,8 +120,8 @@
                 app:curveFit="linear"
                 app:framePosition="0"
                 app:keyPositionType="deltaRelative"
-                app:percentX="1"
                 app:motionTarget="@+id/favourite"
+                app:percentX="1"
                 app:transitionEasing="decelerate" />
             <KeyAttribute
                 android:alpha="0"
@@ -130,8 +132,8 @@
                 app:curveFit="linear"
                 app:framePosition="0"
                 app:keyPositionType="deltaRelative"
-                app:percentX="1"
                 app:motionTarget="@+id/bookmark"
+                app:percentX="1"
                 app:transitionEasing="decelerate" />
             <KeyAttribute
                 android:alpha="0"
@@ -142,8 +144,8 @@
                 app:curveFit="linear"
                 app:framePosition="0"
                 app:keyPositionType="deltaRelative"
-                app:percentX="1"
                 app:motionTarget="@+id/readButton"
+                app:percentX="1"
                 app:transitionEasing="decelerate" />
             <KeyAttribute
                 android:alpha="0"

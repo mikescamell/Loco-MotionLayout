@@ -5,7 +5,11 @@
     <Transition
         android:id="@+id/startToEnd"
         app:constraintSetStart="@+id/start">
-        <OnSwipe app:touchAnchorId="@id/bookCover" />
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:touchAnchorId="@id/bookCover"
+            app:touchAnchorSide="bottom"
+            app:touchRegionId="@id/bookCover" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">

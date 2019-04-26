@@ -9,7 +9,8 @@
         <OnSwipe
             app:dragDirection="dragDown"
             app:touchAnchorId="@id/bookCover"
-            app:touchAnchorSide="bottom" />
+            app:touchAnchorSide="bottom"
+            app:touchRegionId="@id/bookCover" />
         <KeyFrameSet>
             <KeyAttribute
                 android:alpha="0"
