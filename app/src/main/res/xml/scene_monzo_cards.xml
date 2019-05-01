@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/startToEnd"
+        app:constraintSetEnd="@+id/fanOut"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000"
+        app:motionInterpolator="@anim/custom_overshoot">
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/card3" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/card1"></Constraint>
+
+        <Constraint android:id="@+id/card2"></Constraint>
+
+        <Constraint android:id="@+id/card3"></Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/fanOut">
+
+        <Constraint android:id="@+id/card1">
+            <Transform
+                android:rotation="-17"
+                android:translationX="-12dp"
+                android:translationY="-60dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card2">
+            <Transform android:translationX="12dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card3">
+            <Transform
+                android:rotation="17"
+                android:translationX="-12dp"
+                android:translationY="60dp" />
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>
