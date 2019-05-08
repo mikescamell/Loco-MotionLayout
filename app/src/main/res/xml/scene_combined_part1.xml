@@ -94,19 +94,19 @@
             <KeyAttribute
                 android:alpha="0"
                 android:translationY="24dp"
-                app:framePosition="80"
+                app:framePosition="97"
                 app:motionTarget="@id/favourite" />
             <KeyPosition
                 app:curveFit="linear"
                 app:framePosition="0"
                 app:keyPositionType="deltaRelative"
-                app:percentX="1"
                 app:motionTarget="@+id/favourite"
+                app:percentX="1"
                 app:transitionEasing="decelerate" />
             <KeyAttribute
                 android:alpha="0"
-                android:translationY="48dp"
-                app:framePosition="85"
+                android:translationY="36dp"
+                app:framePosition="97"
                 app:motionTarget="@id/bookmark" />
             <KeyPosition
                 app:curveFit="linear"
@@ -117,8 +117,8 @@
                 app:transitionEasing="decelerate" />
             <KeyAttribute
                 android:alpha="0"
-                android:translationY="72dp"
-                app:framePosition="90"
+                android:translationY="48dp"
+                app:framePosition="97"
                 app:motionTarget="@id/readButton" />
             <KeyPosition
                 app:curveFit="linear"
