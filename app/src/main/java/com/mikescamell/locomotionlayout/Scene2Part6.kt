@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.constraintlayout.motion.widget.MotionScene
 import androidx.core.graphics.ColorUtils
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
@@ -41,6 +42,11 @@ class Scene2Part6 : AppCompatActivity() {
             }
 
         root.setTransitionListener(object : MotionLayout.TransitionListener {
+
+            override fun allowsTransition(p0: MotionScene.Transition?): Boolean {
+                return true
+            }
+
             override fun onTransitionTrigger(
                 motionLayout: MotionLayout, startId: Int, endId: Boolean, progress: Float
             ) {
