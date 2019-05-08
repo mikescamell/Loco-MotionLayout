@@ -7,9 +7,12 @@
         app:constraintSetEnd="@+id/middle"
         app:constraintSetStart="@+id/start"
         app:duration="1000">
-        <OnClick
-            app:clickAction="toggle"
-            app:targetId="@id/bookCover" />
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:onTouchUp="autoComplete"
+            app:touchAnchorId="@id/bookCover"
+            app:touchAnchorSide="bottom"
+            app:touchRegionId="@id/bookCover" />
         <KeyFrameSet>
             <KeyAttribute
                 android:alpha="0"

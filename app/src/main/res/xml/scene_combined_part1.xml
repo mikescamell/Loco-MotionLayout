@@ -9,6 +9,7 @@
         app:duration="1000">
         <OnSwipe
             app:dragDirection="dragDown"
+            app:onTouchUp="autoComplete"
             app:touchAnchorId="@id/bookCover"
             app:touchAnchorSide="bottom"
             app:touchRegionId="@id/bookCover" />
