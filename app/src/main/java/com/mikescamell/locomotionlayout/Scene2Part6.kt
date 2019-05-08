@@ -43,7 +43,7 @@ class Scene2Part6 : AppCompatActivity() {
 
         root.setTransitionListener(object : MotionLayout.TransitionListener {
 
-            override fun allowsTransition(p0: MotionScene.Transition?): Boolean {
+            override fun allowsTransition(transition: MotionScene.Transition): Boolean {
                 return true
             }
 
