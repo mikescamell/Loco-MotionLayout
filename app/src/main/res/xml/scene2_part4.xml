@@ -67,8 +67,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.3"
-                app:layout_height="300dp"
-                app:layout_width="300dp" />
+                android:layout_height="300dp"
+                android:layout_width="300dp" />
             <CustomAttribute
                 app:attributeName="radius"
                 app:customDimension="16dp" />
@@ -77,12 +77,12 @@
 
         <Constraint android:id="@+id/bookSynopsisTitle">
             <Transform android:elevation="4dp" />
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisText">
             <Transform android:elevation="4dp" />
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
@@ -90,8 +90,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bookSynopsisCard"
-                app:layout_height="wrap_content"
-                app:layout_width="150dp" />
+                android:layout_height="wrap_content"
+                android:layout_width="150dp" />
             <Transform
                 android:elevation="4dp"
                 android:rotationX="-55"
@@ -102,39 +102,39 @@
         </Constraint>
 
         <Constraint android:id="@+id/bookType">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/bookName">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/bookAuthor">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/star1">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/star2">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/star3">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/star4">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/star5">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/reviewsText">
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
     </ConstraintSet>
@@ -147,8 +147,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_height="0dp"
-                app:layout_width="0dp" />
+                android:layout_height="0dp"
+                android:layout_width="0dp" />
             <CustomAttribute
                 app:attributeName="radius"
                 app:customDimension="0dp" />
@@ -157,21 +157,21 @@
 
         <Constraint android:id="@+id/bookSynopsisTitle">
             <Transform android:elevation="8dp" />
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/bookSynopsisText">
             <Transform android:elevation="8dp" />
-            <PropertySet app:alpha="0" />
+            <PropertySet android:alpha="0" />
         </Constraint>
 
         <Constraint android:id="@+id/bookCover">
             <Layout
                 app:layout_constraintBottom_toBottomOf="@id/bookSynopsisCard"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_height="wrap_content"
-                app:layout_marginStart="24dp"
-                app:layout_width="120dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_width="120dp" />
             <Transform
                 android:elevation="12dp"
                 android:rotationX="0"
@@ -182,39 +182,39 @@
         </Constraint>
 
         <Constraint android:id="@+id/bookType">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/bookName">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/bookAuthor">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/star1">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/star2">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/star3">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/star4">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/star5">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
         <Constraint android:id="@+id/reviewsText">
-            <PropertySet app:alpha="1" />
+            <PropertySet android:alpha="1" />
         </Constraint>
 
     </ConstraintSet>

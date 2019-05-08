@@ -21,8 +21,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.3"
-                app:layout_height="300dp"
-                app:layout_width="300dp" />
+                android:layout_height="300dp"
+                android:layout_width="300dp" />
             <CustomAttribute
                 app:attributeName="radius"
                 app:customDimension="16dp" />
@@ -34,7 +34,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/bookSynopsisCard"
-                app:layout_width="150dp" />
+                android:layout_width="150dp" />
             <Transform
                 android:elevation="4dp"
                 android:rotationX="-55"
@@ -54,8 +54,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_height="0dp"
-                app:layout_width="0dp" />
+                android:layout_height="0dp"
+                android:layout_width="0dp" />
             <CustomAttribute
                 app:attributeName="radius"
                 app:customDimension="0dp" />
@@ -66,9 +66,9 @@
             <Layout
                 app:layout_constraintBottom_toBottomOf="@id/bookSynopsisCard"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_height="wrap_content"
-                app:layout_marginStart="24dp"
-                app:layout_width="120dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_width="120dp" />
             <Transform
                 android:elevation="12dp"
                 android:rotationX="0"

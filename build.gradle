@@ -8,7 +8,7 @@ buildscript {
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0-alpha13'
+        classpath 'com.android.tools.build:gradle:3.5.0-beta01'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,7 +21,7 @@ plugins {
 
 ext {
     appCompat = "1.1.0-alpha02"
-    constraintLayout = "2.0.0-alpha5"
+    constraintLayout = "2.0.0-beta1"
     coreKtx = "1.1.0-alpha04"
     materialComponents = "1.1.0-alpha04"
 }

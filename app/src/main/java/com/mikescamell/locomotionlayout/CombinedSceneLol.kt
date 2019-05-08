@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.constraintlayout.motion.widget.MotionScene
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.android.synthetic.main.layout2_part4.*
@@ -38,6 +39,11 @@ class CombinedSceneLol : AppCompatActivity() {
             }
 
         root.setTransitionListener(object : MotionLayout.TransitionListener {
+
+            override fun allowsTransition(transition: MotionScene.Transition): Boolean {
+                return true
+            }
+
             override fun onTransitionTrigger(
                 motionLayout: MotionLayout?,
                 startId: Int,
