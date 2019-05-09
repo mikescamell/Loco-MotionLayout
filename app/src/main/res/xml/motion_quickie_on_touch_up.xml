@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/startToEnd"
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start">
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:onTouchUp="stop"
+            app:touchAnchorId="@id/bookCover"
+            app:touchAnchorSide="bottom"
+            app:touchRegionId="@id/bookCover" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/bookCover">
+            <Layout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint android:id="@+id/bookCover">
+            <Layout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>
