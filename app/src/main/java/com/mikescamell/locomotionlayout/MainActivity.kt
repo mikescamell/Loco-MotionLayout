@@ -11,6 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        motionQuickieOnTouchUp.setOnClickListener {
+            startActivity(Intent(this, MotionQuickieOnTouchUp::class.java))
+        }
         scene1Part1Button.setOnClickListener {
             startActivity(Intent(this, Scene1Part1::class.java))
         }
