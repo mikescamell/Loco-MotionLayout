@@ -128,7 +128,7 @@
                     android:id="@+id/midnightPieCheckBox"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"

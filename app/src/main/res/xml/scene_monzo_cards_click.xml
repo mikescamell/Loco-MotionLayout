@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-<!--    <Transition
+    <Transition
         android:id="@+id/delayStartTransition"
         app:autoTransition="animateToEnd"
         app:constraintSetEnd="@+id/start"
@@ -11,7 +11,7 @@
         app:duration="500" />
 
     <Transition
-        android:id="@+id/startToEnd"
+        android:id="@+id/delayStartToFanOut"
         app:autoTransition="animateToEnd"
         app:constraintSetEnd="@+id/fanOut"
         app:constraintSetStart="@+id/start"
@@ -20,14 +20,14 @@
         <OnClick
             app:clickAction="transitionToEnd"
             app:targetId="@id/card3" />
-    </Transition>-->
-    <!--    <Transition
-            android:id="@+id/fanOutToCollapseCards"
-            app:constraintSetEnd="@+id/card1OnTop"
-            app:constraintSetStart="@+id/fanOut"
-            app:duration="600">
-            <OnClick app:targetId="@+id/card1Button" />
-        </Transition>-->
+    </Transition>
+
+    <Transition
+        android:id="@+id/fanOutToCollapseCards"
+        app:constraintSetEnd="@+id/card3OnTop"
+        app:constraintSetStart="@+id/fanOut"
+        app:duration="600">
+    </Transition>
 
     <Transition
         android:id="@+id/card1ToCard2"
