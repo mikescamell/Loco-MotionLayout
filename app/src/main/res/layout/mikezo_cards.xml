@@ -8,7 +8,7 @@
     app:layoutDescription="@xml/scene_monzo_cards_click">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card1"
+        android:id="@+id/bottomCard"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:backgroundTint="@color/midnightSky"
@@ -32,7 +32,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card2"
+        android:id="@+id/middleCard"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:backgroundTint="@color/lagoonBlue"
@@ -56,7 +56,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card3"
+        android:id="@+id/topCard"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:backgroundTint="@color/hotCoral"
@@ -93,7 +93,7 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/card1Button"
+                android:id="@+id/bottomCardButton"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:background="?selectableItemBackground"
@@ -139,7 +139,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/card2Button"
+                android:id="@+id/middleCardButton"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:background="?selectableItemBackground"
@@ -184,7 +184,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/card3Button"
+                android:id="@+id/topCardButton"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:background="?selectableItemBackground"

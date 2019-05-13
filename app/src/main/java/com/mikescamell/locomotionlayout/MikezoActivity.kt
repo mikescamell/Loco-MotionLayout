@@ -16,76 +16,76 @@ class MikezoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.mikezo_cards)
 
-        card1Button.setOnClickListener {
+        bottomCardButton.setOnClickListener {
             when (root.currentState) {
                 R.id.fanOut -> {
-                    root.setTransition(R.id.fanOut, R.id.card3OnTop)
+                    root.setTransition(R.id.fanOut, R.id.topCardOnTop)
                     root.transitionToEnd()
-                    collapsedCardCompletedListener(R.id.card1OnTop)
+                    collapsedCardCompletedListener(R.id.bottomCardOnTop)
                     midnightPieCheckBox.isVisible = true
                 }
-                R.id.card1OnTop -> {
+                R.id.bottomCardOnTop -> {
                     Log.d("Mikezo", "Card 1 already on top")
                 }
-                R.id.card2OnTop -> {
-                    root.setTransition(R.id.card2OnTop, R.id.card1OnTop)
+                R.id.middleCardOnTop -> {
+                    root.setTransition(R.id.middleCardOnTop, R.id.bottomCardOnTop)
                     root.transitionToEnd()
                     legumeBlueCheckBox.isGone = true
                     midnightPieCheckBox.isVisible = true
                 }
-                R.id.card3OnTop -> {
-                    root.setTransition(R.id.card3OnTop, R.id.card1OnTop)
+                R.id.topCardOnTop -> {
+                    root.setTransition(R.id.topCardOnTop, R.id.bottomCardOnTop)
                     root.transitionToEnd()
                     hotWaffleCheckBox.isGone = true
                     midnightPieCheckBox.isVisible = true
                 }
             }
         }
-        card2Button.setOnClickListener {
+        middleCardButton.setOnClickListener {
             when (root.currentState) {
                 R.id.fanOut -> {
-                    root.setTransition(R.id.fanOut, R.id.card3OnTop)
+                    root.setTransition(R.id.fanOut, R.id.topCardOnTop)
                     root.transitionToEnd()
-                    collapsedCardCompletedListener(R.id.card2OnTop)
+                    collapsedCardCompletedListener(R.id.middleCardOnTop)
                     legumeBlueCheckBox.isVisible = true
                 }
-                R.id.card1OnTop -> {
-                    root.setTransition(R.id.card1OnTop, R.id.card2OnTop)
+                R.id.bottomCardOnTop -> {
+                    root.setTransition(R.id.bottomCardOnTop, R.id.middleCardOnTop)
                     root.transitionToEnd()
                     midnightPieCheckBox.isGone = true
                     legumeBlueCheckBox.isVisible = true
                 }
-                R.id.card2OnTop -> {
+                R.id.middleCardOnTop -> {
                     Log.d("Mikezo", "Card 2 already on top")
                 }
-                R.id.card3OnTop -> {
-                    root.setTransition(R.id.card3OnTop, R.id.card2OnTop)
+                R.id.topCardOnTop -> {
+                    root.setTransition(R.id.topCardOnTop, R.id.middleCardOnTop)
                     root.transitionToEnd()
                     hotWaffleCheckBox.isGone = true
                     legumeBlueCheckBox.isVisible = true
                 }
             }
         }
-        card3Button.setOnClickListener {
+        topCardButton.setOnClickListener {
             when (root.currentState) {
                 R.id.fanOut -> {
-                    root.setTransition(R.id.fanOut, R.id.card3OnTop)
+                    root.setTransition(R.id.fanOut, R.id.topCardOnTop)
                     root.transitionToEnd()
                     hotWaffleCheckBox.isVisible = true
                 }
-                R.id.card1OnTop -> {
-                    root.setTransition(R.id.card1OnTop, R.id.card3OnTop)
+                R.id.bottomCardOnTop -> {
+                    root.setTransition(R.id.bottomCardOnTop, R.id.topCardOnTop)
                     root.transitionToEnd()
                     midnightPieCheckBox.isGone = true
                     hotWaffleCheckBox.isVisible = true
                 }
-                R.id.card2OnTop -> {
-                    root.setTransition(R.id.card2OnTop, R.id.card3OnTop)
+                R.id.middleCardOnTop -> {
+                    root.setTransition(R.id.middleCardOnTop, R.id.topCardOnTop)
                     root.transitionToEnd()
                     legumeBlueCheckBox.isGone = true
                     hotWaffleCheckBox.isVisible = true
                 }
-                R.id.card3OnTop -> {
+                R.id.topCardOnTop -> {
                     Log.d("Mikezo", "Card 3 already on top")
                 }
             }
@@ -106,8 +106,8 @@ class MikezoActivity : AppCompatActivity() {
             }
 
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                if (p1 == R.id.card3OnTop) {
-                    root.setTransition(R.id.card3OnTop, endStateId)
+                if (p1 == R.id.topCardOnTop) {
+                    root.setTransition(R.id.topCardOnTop, endStateId)
                     root.transitionToEnd()
                 }
                 root.setTransitionListener(null)
