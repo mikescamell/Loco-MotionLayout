@@ -2,7 +2,7 @@
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Transition
+<!--    <Transition
         android:id="@+id/startToEnd"
         app:constraintSetEnd="@+id/fanOut"
         app:constraintSetStart="@+id/start"
@@ -11,7 +11,7 @@
         <OnClick
             app:clickAction="toggle"
             app:targetId="@id/card1Button" />
-    </Transition>
+    </Transition>-->
 
 <!--    <Transition
         android:id="@+id/fanOutToCollapseCards"

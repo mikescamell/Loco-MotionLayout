@@ -94,19 +94,31 @@ class MikezoActivity : AppCompatActivity() {
 
     private fun collapsedCardCompletedListener(@IdRes endStateId: Int) {
         root.setTransitionListener(object : MotionLayout.TransitionListener {
-            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+
+            override fun allowsTransition(transition: MotionScene.Transition): Boolean {
+                return true
             }
 
-            override fun allowsTransition(p0: MotionScene.Transition?): Boolean = true
-
-            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
+            override fun onTransitionTrigger(
+                motionLayout: MotionLayout, startId: Int, endId: Boolean, progress: Float
+            ) {
             }
 
-            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
+            override fun onTransitionStarted(
+                motionLayout: MotionLayout, startId: Int, endId: Int
+            ) {
             }
 
-            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                if (p1 == R.id.topCardOnTop) {
+            override fun onTransitionChange(
+                motionLayout: MotionLayout,
+                startId: Int,
+                endId: Int,
+                progress: Float
+            ) {
+            }
+
+            override fun onTransitionCompleted(motionLayout: MotionLayout, currentId: Int) {
+                if (currentId == R.id.topCardOnTop) {
                     root.setTransition(R.id.topCardOnTop, endStateId)
                     root.transitionToEnd()
                 }

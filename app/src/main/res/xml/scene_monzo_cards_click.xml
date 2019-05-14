@@ -28,7 +28,7 @@
         android:id="@+id/bottomCardToMiddleCard"
         app:constraintSetEnd="@+id/middleCardOnTop"
         app:constraintSetStart="@+id/bottomCardOnTop"
-        app:duration="3000"
+        app:duration="600"
         app:motionInterpolator="easeOut">
         <KeyFrameSet>
             <KeyAttribute
