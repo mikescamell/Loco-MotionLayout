@@ -10,6 +10,12 @@
         android:orientation="vertical">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/monzoCardSelectionAnimationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monzo Card Selection Animation" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/motionQuickieOnTouchUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

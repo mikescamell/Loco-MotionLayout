@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/delayStartTransition"
+        app:autoTransition="animateToEnd"
+        app:constraintSetEnd="@+id/start"
+        app:constraintSetStart="@+id/delayStart"
+        app:duration="600" />
+
+    <Transition
+        android:id="@+id/delayStartToFanOut"
+        app:autoTransition="animateToEnd"
+        app:constraintSetEnd="@+id/fanOut"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000"
+        app:motionInterpolator="bounce">
+    </Transition>
+
+    <Transition
+        android:id="@+id/fanOutToCollapseCards"
+        app:constraintSetEnd="@+id/topCardOnTop"
+        app:constraintSetStart="@+id/fanOut"
+        app:duration="600" />
+
+    <Transition
+        android:id="@+id/bottomCardToMiddleCard"
+        app:constraintSetEnd="@+id/middleCardOnTop"
+        app:constraintSetStart="@+id/bottomCardOnTop"
+        app:duration="600"
+        app:motionInterpolator="easeOut">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="45"
+                android:translationX="125dp"
+                android:translationY="-200dp"
+                app:framePosition="50"
+                app:motionTarget="@+id/middleCard" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/bottomCardToTopCard"
+        app:constraintSetEnd="@+id/topCardOnTop"
+        app:constraintSetStart="@+id/bottomCardOnTop"
+        app:duration="600"
+        app:motionInterpolator="easeOut">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="45"
+                android:translationX="125dp"
+                android:translationY="-200dp"
+                app:framePosition="50"
+                app:motionTarget="@+id/topCard" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/middleCardToBottomCard"
+        app:constraintSetEnd="@+id/bottomCardOnTop"
+        app:constraintSetStart="@+id/middleCardOnTop"
+        app:duration="600"
+        app:motionInterpolator="easeOut">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="45"
+                android:translationX="125dp"
+                android:translationY="-200dp"
+                app:framePosition="50"
+                app:motionTarget="@+id/bottomCard" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/middleCardToTopCard"
+        app:constraintSetEnd="@+id/topCardOnTop"
+        app:constraintSetStart="@+id/middleCardOnTop"
+        app:duration="600"
+        app:motionInterpolator="easeOut">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="45"
+                android:translationX="125dp"
+                android:translationY="-200dp"
+                app:framePosition="50"
+                app:motionTarget="@+id/topCard" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/topCardToBottomCard"
+        app:constraintSetEnd="@+id/bottomCardOnTop"
+        app:constraintSetStart="@+id/topCardOnTop"
+        app:duration="600"
+        app:motionInterpolator="easeOut">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="45"
+                android:translationX="125dp"
+                android:translationY="-200dp"
+                app:framePosition="50"
+                app:motionTarget="@+id/bottomCard" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/topCardToMiddleCard"
+        app:constraintSetEnd="@+id/middleCardOnTop"
+        app:constraintSetStart="@+id/topCardOnTop"
+        app:duration="600">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="45"
+                android:translationX="125dp"
+                android:translationY="-200dp"
+                app:framePosition="50"
+                app:motionTarget="@+id/middleCard" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/delayStart" />
+
+    <ConstraintSet android:id="@+id/start" />
+
+    <ConstraintSet android:id="@+id/fanOut">
+
+        <Constraint android:id="@+id/bottomCard">
+            <Transform
+                android:rotation="-17"
+                android:translationX="-12dp"
+                android:translationY="-60dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/middleCard">
+            <Transform android:translationX="12dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/topCard">
+            <Transform
+                android:rotation="17"
+                android:translationX="-12dp"
+                android:translationY="60dp" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/topCardOnTop">
+
+        <Constraint android:id="@+id/bottomCard">
+            <Transform
+                android:elevation="1dp"
+                android:rotation="7" />
+        </Constraint>
+
+        <Constraint android:id="@+id/middleCard">
+            <Transform
+                android:elevation="1dp"
+                android:rotation="-7" />
+        </Constraint>
+
+        <Constraint android:id="@+id/topCard">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/bottomCardOnTop">
+
+        <Constraint android:id="@+id/bottomCard">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/middleCard">
+            <Transform
+                android:elevation="1dp"
+                android:rotation="7" />
+        </Constraint>
+
+        <Constraint android:id="@+id/topCard">
+            <Transform
+                android:elevation="1dp"
+                android:rotation="-7" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/middleCardOnTop">
+
+        <Constraint android:id="@+id/bottomCard">
+            <Transform
+                android:elevation="1dp"
+                android:rotation="7" />
+        </Constraint>
+
+        <Constraint android:id="@+id/middleCard">
+            <Transform android:elevation="4dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/topCard">
+            <Transform
+                android:elevation="1dp"
+                android:rotation="-7" />
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

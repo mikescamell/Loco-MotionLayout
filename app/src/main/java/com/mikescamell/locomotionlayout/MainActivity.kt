@@ -11,6 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        monzoCardSelectionAnimationButton.setOnClickListener {
+            startActivity(Intent(this, MikezoActivity::class.java))
+        }
         motionQuickieOnTouchUp.setOnClickListener {
             startActivity(Intent(this, MotionQuickieOnTouchUp::class.java))
         }

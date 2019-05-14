@@ -36,6 +36,7 @@
         <activity android:name=".CombinedScenePart2" />
         <activity android:name=".CombinedScenePart3" />
         <activity android:name=".CombinedSceneLol" />
+        <activity android:name=".MikezoActivity" />
         <activity android:name=".MotionQuickieOnTouchUp" />
     </application>
 
