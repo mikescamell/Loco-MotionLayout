@@ -1,5 +1,7 @@
 package com.mikescamell.locomotionlayout
 
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
@@ -7,6 +9,8 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.constraintlayout.motion.widget.MotionScene
+import androidx.constraintlayout.motion.widget.TransitionAdapter
+import androidx.core.graphics.ColorUtils
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.android.synthetic.main.layout2_part4.*
@@ -38,43 +42,20 @@ class CombinedSceneLol : AppCompatActivity() {
                 setImageDrawable(bottomRightAnimationForward)
             }
 
-        root.setTransitionListener(object : MotionLayout.TransitionListener {
-
-            override fun allowsTransition(transition: MotionScene.Transition): Boolean {
-                return true
-            }
-
-            override fun onTransitionTrigger(
-                motionLayout: MotionLayout?,
-                startId: Int,
-                endId: Boolean,
-                progress: Float
-            ) {
-            }
-
-            override fun onTransitionStarted(
-                motionLayout: MotionLayout?,
-                startId: Int,
-                endId: Int
-            ) {
-            }
+        root.setTransitionListener(object : TransitionAdapter() {
 
             override fun onTransitionChange(
-                motionLayout: MotionLayout?,
+                motionLayout: MotionLayout,
                 startId: Int,
                 endId: Int,
                 progress: Float
             ) {
-                if (startId == R.id.middle) {
-                    /*val color =
-                        ColorUtils.setAlphaComponent(Color.WHITE, calculateProgressAlpha(progress))
-                    bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
-                    bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)*/
-                }
+                val color =
+                    ColorUtils.setAlphaComponent(Color.WHITE, calculateProgressAlpha(progress))
+                bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
             }
 
-            override fun onTransitionCompleted(motionLayout: MotionLayout?, p1: Int) {
-            }
         })
 
         topLeftAnimationForward?.registerAnimationCallback(object :

@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
-import androidx.constraintlayout.motion.widget.MotionScene
+import androidx.constraintlayout.motion.widget.TransitionAdapter
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.mikezo_cards.*
@@ -93,29 +93,7 @@ class MikezoActivity : AppCompatActivity() {
     }
 
     private fun collapsedCardCompletedListener(@IdRes endStateId: Int) {
-        root.setTransitionListener(object : MotionLayout.TransitionListener {
-
-            override fun allowsTransition(transition: MotionScene.Transition): Boolean {
-                return true
-            }
-
-            override fun onTransitionTrigger(
-                motionLayout: MotionLayout, startId: Int, endId: Boolean, progress: Float
-            ) {
-            }
-
-            override fun onTransitionStarted(
-                motionLayout: MotionLayout, startId: Int, endId: Int
-            ) {
-            }
-
-            override fun onTransitionChange(
-                motionLayout: MotionLayout,
-                startId: Int,
-                endId: Int,
-                progress: Float
-            ) {
-            }
+        root.setTransitionListener(object : TransitionAdapter() {
 
             override fun onTransitionCompleted(motionLayout: MotionLayout, currentId: Int) {
                 if (currentId == R.id.topCardOnTop) {

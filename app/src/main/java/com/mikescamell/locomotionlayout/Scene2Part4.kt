@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
-import androidx.constraintlayout.motion.widget.MotionScene
+import androidx.constraintlayout.motion.widget.TransitionAdapter
 import androidx.core.graphics.ColorUtils
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
@@ -44,21 +44,7 @@ class Scene2Part4 : AppCompatActivity() {
                 setImageDrawable(bottomRightAnimationForward)
             }
 
-        root.setTransitionListener(object : MotionLayout.TransitionListener {
-
-            override fun allowsTransition(transition: MotionScene.Transition): Boolean {
-                return true
-            }
-
-            override fun onTransitionTrigger(
-                motionLayout: MotionLayout, startId: Int, endId: Boolean, progress: Float
-            ) {
-            }
-
-            override fun onTransitionStarted(
-                motionLayout: MotionLayout, startId: Int, endId: Int
-            ) {
-            }
+        root.setTransitionListener(object : TransitionAdapter() {
 
             override fun onTransitionChange(
                 motionLayout: MotionLayout,
@@ -72,8 +58,6 @@ class Scene2Part4 : AppCompatActivity() {
                 bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
             }
 
-            override fun onTransitionCompleted(motionLayout: MotionLayout, currentId: Int) {
-            }
         })
 
         topLeftAnimationForward?.registerAnimationCallback(object :
