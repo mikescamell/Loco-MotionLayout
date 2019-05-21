@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
         monzoCardSelectionAnimationButton.setOnClickListener {
             startActivity(Intent(this, MikezoActivity::class.java))
         }
+        motionQuickieSubElements.setOnClickListener {
+            startActivity(Intent(this, MotionQuickieSubelements::class.java))
+        }
         motionQuickieOnTouchUp.setOnClickListener {
             startActivity(Intent(this, MotionQuickieOnTouchUp::class.java))
         }
