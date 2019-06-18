@@ -20,10 +20,10 @@ plugins {
 }
 
 ext {
-    appCompat = "1.1.0-alpha02"
+    appCompat = "1.1.0-beta01"
     constraintLayout = "2.0.0-beta2"
-    coreKtx = "1.1.0-alpha04"
-    materialComponents = "1.1.0-alpha04"
+    coreKtx = "1.2.0-alpha02"
+    materialComponents = "1.1.0-alpha07"
 }
 
 allprojects {
