@@ -1,4 +1,4 @@
-package com.mikescamell.locomotionlayout
+package com.mikescamell.motionlayout
 
 import android.os.Bundle
 import android.util.Log
