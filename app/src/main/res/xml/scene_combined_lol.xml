@@ -303,9 +303,6 @@
             <Transform android:rotationX="-55" />
         </Constraint>
 
-        <!--The translationX value here is a hack!
-            alpha4 changed something with chains which pushes the book cover to the left, even though it's not part of the chain
-            TODO ask NR & JH-->
         <Constraint android:id="@+id/bookCover">
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
@@ -320,7 +317,6 @@
                 android:layout_width="wrap_content" />
             <Transform
                 android:elevation="4dp"
-                android:translationX="64dp"
                 android:rotationX="0" />
         </Constraint>
 
@@ -492,9 +488,6 @@
             <Transform android:elevation="4dp" />
         </Constraint>
 
-        <!--The translationX value here is a hack!
-            alpha4 changed something with chains which pushes the book cover to the left, even though it's not part of the chain
-            TODO ask NR & JH-->
         <Constraint android:id="@+id/bookCover">
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
@@ -508,7 +501,6 @@
             <Transform
                 android:elevation="4dp"
                 android:rotationX="-55"
-                android:translationX="24dp"
                 android:translationY="-48dp" />
         </Constraint>
 
