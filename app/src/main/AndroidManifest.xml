@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mikescamell.locomotionlayout">
+    package="com.mikescamell.motionlayout">
 
     <application
         android:allowBackup="true"
@@ -11,34 +11,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.mikescamell.motionlayout.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Scene1Part2" />
-        <activity android:name=".Scene1Part1" />
-        <activity android:name=".Scene1Part3" />
-        <activity android:name=".Scene1Part4" />
-        <activity android:name=".Scene1Part5" />
-        <activity android:name=".Scene1Part6" />
-        <activity android:name=".Scene1Part7" />
-        <activity android:name=".Scene2Part1" />
-        <activity android:name=".Scene2Part2" />
-        <activity android:name=".Scene2Part3" />
-        <activity android:name=".Scene2Part4" />
-        <activity android:name=".Scene2Part5" />
-        <activity android:name=".Scene2Part6" />
-        <activity android:name=".Scene2Part7" />
-        <activity android:name=".CombinedScenePart1" />
-        <activity android:name=".CombinedScenePart2" />
-        <activity android:name=".CombinedScenePart3" />
-        <activity android:name=".CombinedSceneLol" />
-        <activity android:name=".MikezoActivity" />
-        <activity android:name=".MotionQuickieOnTouchUp" />
-        <activity android:name=".MotionQuickieSubelements" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene1Part2" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene1Part1" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene1Part3" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene1Part4" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene1Part5" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene1Part6" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene1Part7" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene2Part1" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene2Part2" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene2Part3" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene2Part4" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene2Part5" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene2Part6" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.Scene2Part7" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.CombinedScenePart1" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.CombinedScenePart2" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.CombinedScenePart3" />
+        <activity android:name="com.mikescamell.motionlayout.loco_motionlayout.CombinedSceneLol" />
+        <activity android:name="com.mikescamell.motionlayout.MikezoActivity" />
+        <activity android:name="com.mikescamell.motionlayout.quickies.MotionQuickieOnTouchUp" />
+        <activity android:name="com.mikescamell.motionlayout.quickies.MotionQuickieSubelements" />
+        <activity android:name=".quickies.MotionLayoutQuickiesActivity" />
+        <activity android:name=".loco_motionlayout.LocoMotionLayoutActivity" />
     </application>
 
 </manifest>

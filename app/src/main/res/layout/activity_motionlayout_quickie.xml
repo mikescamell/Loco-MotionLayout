@@ -10,22 +10,16 @@
         android:orientation="vertical">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/locoMotionLayoutButton"
+            android:id="@+id/motionQuickieSubElements"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Loco-MotionLayout" />
+            android:text="MotionQuickie - Sub-Elements" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/motionLayoutQuickies"
+            android:id="@+id/motionQuickieOnTouchUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MotionLayout Quickies" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/monzoCardSelectionAnimationButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Monzo Card Selection Animation" />
+            android:text="MotionQuickie - OnTouchUp" />
 
     </LinearLayout>
 

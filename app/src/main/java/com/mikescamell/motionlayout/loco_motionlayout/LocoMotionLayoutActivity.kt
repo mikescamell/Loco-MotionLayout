@@ -1,25 +1,17 @@
-package com.mikescamell.locomotionlayout
+package com.mikescamell.motionlayout.loco_motionlayout
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.mikescamell.motionlayout.R
+import kotlinx.android.synthetic.main.activity_loco_motionlayout.*
 
-class MainActivity : AppCompatActivity() {
+class LocoMotionLayoutActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_loco_motionlayout)
 
-        monzoCardSelectionAnimationButton.setOnClickListener {
-            startActivity(Intent(this, MikezoActivity::class.java))
-        }
-        motionQuickieSubElements.setOnClickListener {
-            startActivity(Intent(this, MotionQuickieSubelements::class.java))
-        }
-        motionQuickieOnTouchUp.setOnClickListener {
-            startActivity(Intent(this, MotionQuickieOnTouchUp::class.java))
-        }
         scene1Part1Button.setOnClickListener {
             startActivity(Intent(this, Scene1Part1::class.java))
         }

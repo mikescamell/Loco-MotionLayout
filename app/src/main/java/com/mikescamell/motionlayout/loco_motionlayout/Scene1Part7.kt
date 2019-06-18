@@ -1,4 +1,4 @@
-package com.mikescamell.locomotionlayout
+package com.mikescamell.motionlayout.loco_motionlayout
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -7,25 +7,35 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
+import com.mikescamell.motionlayout.R
+import com.mikescamell.motionlayout.setLightStatusBar
 
-class Scene2Part1 : AppCompatActivity() {
+class Scene1Part7 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout2_part1)
+        setContentView(R.layout.layout1_part7)
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         setLightStatusBar(window.decorView)
 
         val topLeftAnimationForward =
-            AnimatedVectorDrawableCompat.create(this, R.drawable.top_left_liquid_forward)
+            AnimatedVectorDrawableCompat.create(this,
+                R.drawable.top_left_liquid_forward
+            )
         val topLeftAnimationReverse =
-            AnimatedVectorDrawableCompat.create(this, R.drawable.top_left_liquid_reverse)
+            AnimatedVectorDrawableCompat.create(this,
+                R.drawable.top_left_liquid_reverse
+            )
 
         val bottomRightAnimationForward =
-            AnimatedVectorDrawableCompat.create(this, R.drawable.bottom_right_liquid_forward)
+            AnimatedVectorDrawableCompat.create(this,
+                R.drawable.bottom_right_liquid_forward
+            )
         val bottomRightAnimationReverse =
-            AnimatedVectorDrawableCompat.create(this, R.drawable.bottom_right_liquid_reverse)
+            AnimatedVectorDrawableCompat.create(this,
+                R.drawable.bottom_right_liquid_reverse
+            )
 
         val topLeftImageView = (findViewById<ImageView>(R.id.bookSynopsisFluidTopLeft)).apply {
             setImageDrawable(topLeftAnimationForward)
