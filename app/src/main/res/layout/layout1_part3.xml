@@ -9,6 +9,7 @@
         android:id="@+id/bookSynopsisCard"
         android:layout_width="140dp"
         android:layout_height="140dp"
+        android:visibility="visible"
         app:cardBackgroundColor="@color/crazyPink"
         app:cardCornerRadius="16dp" />
 
@@ -16,6 +17,7 @@
         android:id="@+id/bookCover"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
+        android:visibility="gone"
         android:adjustViewBounds="true"
         android:contentDescription="@string/bookcover"
         android:elevation="4dp"
