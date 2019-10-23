@@ -210,6 +210,7 @@
             <Transform android:rotationX="-55" />
         </Constraint>
 
+        <!--The translationX value here is a hack! There's an issue with beta3 -->
         <Constraint android:id="@+id/bookCover">
             <Layout
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -221,6 +222,7 @@
                 android:layout_width="wrap_content" />
             <Transform
                 android:elevation="4dp"
+                android:translationX="36dp"
                 android:rotationX="0" />
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
@@ -367,6 +369,7 @@
             <PropertySet android:alpha="1" />
         </Constraint>
 
+        <!--The translationX value here is a hack! There's an issue with beta3 -->
         <Constraint android:id="@+id/bookCover">
             <Layout
                 app:layout_constraintEnd_toEndOf="parent"
@@ -377,6 +380,7 @@
             <Transform
                 android:elevation="4dp"
                 android:rotationX="-55"
+                android:translationX="12dp"
                 android:translationY="-48dp" />
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"

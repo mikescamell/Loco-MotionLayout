@@ -303,10 +303,8 @@
             <Transform android:rotationX="-55" />
         </Constraint>
 
+        <!--The translationX value here is a hack! There's an issue with beta3 -->
         <Constraint android:id="@+id/bookCover">
-            <CustomAttribute
-                app:attributeName="outlineSpotShadowColor"
-                app:customColorValue="@color/black" />
             <Layout
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -317,7 +315,11 @@
                 android:layout_width="wrap_content" />
             <Transform
                 android:elevation="4dp"
+                android:translationX="48dp"
                 android:rotationX="0" />
+            <CustomAttribute
+                app:attributeName="outlineSpotShadowColor"
+                app:customColorValue="@color/black" />
         </Constraint>
 
         <Constraint android:id="@+id/bookType">
@@ -488,10 +490,8 @@
             <Transform android:elevation="4dp" />
         </Constraint>
 
+        <!--The translationX value here is a hack! There's an issue with beta3 -->
         <Constraint android:id="@+id/bookCover">
-            <CustomAttribute
-                app:attributeName="outlineSpotShadowColor"
-                app:customColorValue="@color/transparent" />
             <Layout
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -501,7 +501,11 @@
             <Transform
                 android:elevation="4dp"
                 android:rotationX="-55"
+                android:translationX="12dp"
                 android:translationY="-48dp" />
+            <CustomAttribute
+                app:attributeName="outlineSpotShadowColor"
+                app:customColorValue="@color/transparent" />
         </Constraint>
 
         <Constraint android:id="@+id/bookType">
