@@ -462,24 +462,6 @@
             <Motion app:transitionEasing="accelerate" />
         </Constraint>
 
-        <!--The translationX value here is a hack! There's an issue with beta3 -->
-        <Constraint android:id="@+id/bookCover">
-            <Layout
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bookSynopsisCard" />
-            <Transform
-                android:elevation="4dp"
-                android:rotationX="-55"
-                android:translationX="12dp"
-                android:translationY="-48dp" />
-            <CustomAttribute
-                app:attributeName="outlineSpotShadowColor"
-                app:customColorValue="@color/transparent" />
-        </Constraint>
-
         <Constraint android:id="@+id/bookSynopsisCard">
             <Layout
                 android:layout_width="300dp"
@@ -518,6 +500,7 @@
             <Transform
                 android:elevation="4dp"
                 android:rotationX="-55"
+                android:translationX="12dp"
                 android:translationY="-48dp" />
             <CustomAttribute
                 app:attributeName="outlineSpotShadowColor"
