@@ -27,20 +27,24 @@ class CombinedSceneLol : AppCompatActivity() {
         setLightStatusBar(window.decorView)
 
         val topLeftAnimationForward =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.top_left_liquid_forward_lol
             )
         val topLeftAnimationReverse =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.top_left_liquid_reverse_lol
             )
 
         val bottomRightAnimationForward =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.bottom_right_liquid_forward_lol
             )
         val bottomRightAnimationReverse =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.bottom_right_liquid_reverse_lol
             )
 
@@ -60,12 +64,15 @@ class CombinedSceneLol : AppCompatActivity() {
                 endId: Int,
                 progress: Float
             ) {
-                val color =
-                    ColorUtils.setAlphaComponent(Color.WHITE,
-                        calculateProgressAlpha(progress)
-                    )
-                bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
-                bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                if (startId == R.id.middle) {
+                    val color =
+                        ColorUtils.setAlphaComponent(
+                            Color.WHITE,
+                            calculateProgressAlpha(progress)
+                        )
+                    bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                    bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                }
             }
 
         })
