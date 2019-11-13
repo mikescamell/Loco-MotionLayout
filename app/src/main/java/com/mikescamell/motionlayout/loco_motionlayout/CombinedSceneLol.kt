@@ -1,21 +1,14 @@
 package com.mikescamell.motionlayout.loco_motionlayout
 
-import android.graphics.Color
-import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.motion.widget.MotionLayout
-import androidx.constraintlayout.motion.widget.TransitionAdapter
-import androidx.core.graphics.ColorUtils
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.mikescamell.motionlayout.R
-import com.mikescamell.motionlayout.calculateProgressAlpha
 import com.mikescamell.motionlayout.setLightStatusBar
-import kotlinx.android.synthetic.main.layout2_part4.*
 
 class CombinedSceneLol : AppCompatActivity() {
 
@@ -27,20 +20,24 @@ class CombinedSceneLol : AppCompatActivity() {
         setLightStatusBar(window.decorView)
 
         val topLeftAnimationForward =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.top_left_liquid_forward_lol
             )
         val topLeftAnimationReverse =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.top_left_liquid_reverse_lol
             )
 
         val bottomRightAnimationForward =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.bottom_right_liquid_forward_lol
             )
         val bottomRightAnimationReverse =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.bottom_right_liquid_reverse_lol
             )
 
@@ -51,24 +48,6 @@ class CombinedSceneLol : AppCompatActivity() {
             (findViewById<ImageView>(R.id.bookSynopsisFluidBottomRight)).apply {
                 setImageDrawable(bottomRightAnimationForward)
             }
-
-        root.setTransitionListener(object : TransitionAdapter() {
-
-            override fun onTransitionChange(
-                motionLayout: MotionLayout,
-                startId: Int,
-                endId: Int,
-                progress: Float
-            ) {
-                val color =
-                    ColorUtils.setAlphaComponent(Color.WHITE,
-                        calculateProgressAlpha(progress)
-                    )
-                bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
-                bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
-            }
-
-        })
 
         topLeftAnimationForward?.registerAnimationCallback(object :
             Animatable2Compat.AnimationCallback() {

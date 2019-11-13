@@ -27,20 +27,24 @@ class CombinedScenePart3 : AppCompatActivity() {
         setLightStatusBar(window.decorView)
 
         val topLeftAnimationForward =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.top_left_liquid_forward
             )
         val topLeftAnimationReverse =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.top_left_liquid_reverse
             )
 
         val bottomRightAnimationForward =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.bottom_right_liquid_forward
             )
         val bottomRightAnimationReverse =
-            AnimatedVectorDrawableCompat.create(this,
+            AnimatedVectorDrawableCompat.create(
+                this,
                 R.drawable.bottom_right_liquid_reverse
             )
 
@@ -60,14 +64,17 @@ class CombinedScenePart3 : AppCompatActivity() {
                 endId: Int,
                 progress: Float
             ) {
-                val color =
-                    ColorUtils.setAlphaComponent(Color.WHITE,
-                        calculateProgressAlpha(progress)
-                    )
-                bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
-                bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                if (startId == R.id.middle) {
+                    val color =
+                        ColorUtils.setAlphaComponent(
+                            Color.WHITE,
+                            calculateProgressAlpha(progress)
+                        )
+                    bottomRightAnimationForward?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                    bottomRightAnimationReverse?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+                }
             }
-
+            
         })
 
         topLeftAnimationForward?.registerAnimationCallback(object :
